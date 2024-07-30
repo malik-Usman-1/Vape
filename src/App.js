@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Navbar/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Aboutscreen from './Screens/Aboutscreen';
+import Pagescreen from './Screens/Pagescreen';
+import Blogscreen from './Screens/Blogscreen';
+import Homescreen from './Screens/Homescreen';
+import Nav from './Navbar/Nav';
+import Foooter from './Footer/Foooter';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <>
+   {/* <Navbar/> */}
+
+   {/* <Nav/> */}
+
+   <Routes>
+
+   <Route path='/' element={<Homescreen/>}/>
+
+    <Route path='/about' element={<Aboutscreen/>}/>
+    <Route path='/page' element={<Pagescreen/>}/>
+    <Route path='/blog' element={<Blogscreen/>}/>
+
+
+   </Routes>
+   <Foooter/>
+   </>
   );
 }
 
